@@ -1,0 +1,105 @@
+.Joke {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.Joke:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.Joke-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.Joke-arrow {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #9e9e9e;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.Joke-arrow:hover {
+  color: #757575;
+}
+
+.Joke-arrow:active {
+  transform: scale(1.2);
+}
+
+.Joke-arrow.voted {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.Joke-vote {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 3px solid;
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  background-color: #f5f5f5;
+  transition: all 0.3s ease;
+}
+
+.Joke-text {
+  flex-grow: 1;
+  margin: 0 1rem;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  color: #333;
+}
+
+.Joke-smile {
+  font-size: 4rem;
+  margin-left: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.Joke-smile:hover {
+  transform: scale(1.1) rotate(15deg);
+}
+
+@media (max-width: 768px) {
+  .Joke {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .Joke-buttons {
+    flex-direction: row;
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .Joke-vote {
+    margin: 0 1rem;
+  }
+
+  .Joke-text {
+    margin: 1rem 0;
+  }
+
+  .Joke-smile {
+    align-self: flex-end;
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+}

@@ -1,0 +1,122 @@
+.JokeList {
+  display: flex;
+  width: 90%;
+  max-width: 1200px;
+  height: 90vh;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.JokeList-sidebar {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.JokeList-title {
+  font-size: 3rem;
+  color: white;
+  font-weight: 300;
+  letter-spacing: 0.6rem;
+  margin-bottom: 2rem;
+}
+
+.JokeList-title span {
+  font-weight: 700;
+}
+
+.JokeList-emoji {
+  font-size: 10rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+
+.JokeList-button {
+  font-size: 1.2rem;
+  width: 50%;
+  border-radius: 2rem;
+  padding: 1rem 2rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #764ba2;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.JokeList-button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+.JokeList-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.JokeList-jokes {
+  height: 90%;
+  background: #f7f7f7;
+  align-self: center;
+  width: 70%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 2rem;
+}
+
+.JokeList-jokes::-webkit-scrollbar {
+  width: 8px;
+  background: #f1f1f1;
+}
+
+.JokeList-jokes::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.JokeList-jokes::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@media (max-width: 1024px) {
+  .JokeList {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .JokeList-sidebar {
+    width: 100%;
+    padding: 2rem 0;
+  }
+
+  .JokeList-jokes {
+    width: 100%;
+    max-height: 60vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .JokeList-title {
+    font-size: 2rem;
+  }
+
+  .JokeList-emoji {
+    font-size: 6rem;
+  }
+
+  .JokeList-button {
+    width: 70%;
+  }
+}
